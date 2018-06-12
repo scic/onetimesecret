@@ -48,24 +48,47 @@
 }
 
 #createSecret textarea, #createSecret input {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 0;
+  padding: 10px;
+  resize: vertical;
+}
+
+.span3 {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 0;
+}
+
+.btn {
+  background-image: none;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: unset;
+}
+
+.btn:hover {
   background-color: #f9f9f9;
-  padding: 6px;
+}
+
+.btn-warning {
+  background-color: #e5261f!important;
 }
 
 .btn-custom {
   -webkit-font-smoothing: antialiased;
-  background-color: #dd4a22!important;
+  background-color: #e5261f!important;
   background-repeat: repeat-x;
   background-image: none;
   color: #fff!important;
-  border-color: #b04420 #b04420 hsl(15,69%,41%);
-  text-shadow: 0 -1px 0 rgba(0,0,0,0.00);
+  text-shadow: none;
   font-weight: bold;
   font-size: 20px;
+  border-radius: unset;
 }
 .btn-custom:hover {
   background-color: #d22000 !important;
-  text-shadow: 1px 1px 0 #740500;
 }
 
 
@@ -102,7 +125,7 @@ hr.clear {background:#fff;color:#fff;clear:both;float:none;width:100%;height:.1e
 
 .tagline { width: 100%; text-align: center; font-style: italic; color: #999; margin-top: 20px; }
 
-.lighter { color: #999; }
+.lighter { color: black; }
 
 .release {text-decoration: none; color: #dddddd; }
 
@@ -259,7 +282,7 @@ div.private{font-size: 18px; line-height: 18px; margin-top: 20px;}
   padding: 39px 19px 14px;
   *padding-top: 19px;
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid black;
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
           border-radius: 4px;
@@ -272,9 +295,9 @@ div.private{font-size: 18px; line-height: 18px; margin-top: 20px;}
   padding: 3px 7px;
   font-size: 12px;
   font-weight: bold;
-  background-color: #f5f5f5;
-  border: 1px solid #ddd;
-  color: #9da0a4;
+  background-color: white;
+  border: 1px solid black;
+  color: black;
   -webkit-border-radius: 4px 0 4px 0;
      -moz-border-radius: 4px 0 4px 0;
           border-radius: 4px 0 4px 0;
