@@ -1,12 +1,9 @@
-#!/bin/sh
+#!/usr/bin/env bash
+set -e
 
-#Move to the folder where OneTimeSecret is installed
-cd `dirname $0`
+SCRIPT_DIR=$(cd -P $(dirname $0) && pwd )
 
-#Was this script started in the bin folder? if yes move out
-if [ -d "../bin" ]; then
-  cd "../"
-fi
+cd $SCRIPT_DIR/..
 
 ignoreRoot=0
 for ARG in $*
@@ -35,10 +32,10 @@ if [ $# -ge 1 ]; then
 fi
 
 #start redis server
-#Note: disable this if your redis server is already running!
-redis-server /etc/onetime/redis.conf
+docker stop myredis
+docker run -d --rm -v `pwd`/etc/onetime/redis.conf:/usr/local/etc/redis/redis.conf --name myredis -p 7179:6379 redis:3.2 redis-server /usr/local/etc/redis/redis.conf
+sleep 2
 
-#Move to the node folder and start
 echo "Started OneTimeSecret..."
 
 bundle exec thin -e dev -R config.ru -p $port start
