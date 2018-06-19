@@ -5,4 +5,11 @@ tmp
 
 .ruby-version
 
+# temp files
+.directory
 .DS_Store
+Thumbs.db
+
+.history/
+.vscode
+.project
